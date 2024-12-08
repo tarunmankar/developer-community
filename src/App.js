@@ -1,24 +1,30 @@
-import DeveloperCard from './components/DeveloperCard';
-import HowToContribute from './components/HowToContribute';
-import developers from './data/developers.json';
-import './styles.css';
+import React, { useState, useEffect } from 'react';
+import './styles/app.css';
+import data from './data/contributors.json';
 
-const App = () => {
+function App() {
+  const [contributors, setContributors] = useState([]);
+
+  useEffect(() => {
+    // Load data from the JSON file (simulating fetching from API)
+    setContributors(data);
+  }, []);
+
   return (
-    <div className="app">
-      <header>
-        <h1>Developer Community</h1>
-      </header>
-      <main>
-        <section className="developer-list">
-          {developers.map((dev, index) => (
-            <DeveloperCard key={index} developer={dev} />
-          ))}
-        </section>
-        <HowToContribute />
-      </main>
+    <div className="App">
+      <h1>Developer Community</h1>
+      <p>Here is a list of developers who contributed to the open-source project:</p>
+      <ul>
+        {contributors.map((bio, index) => (
+          <li key={index}>
+            <h3>{bio.name}</h3>
+            <p>{bio.bio}</p>
+            <a href={bio.github} target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-};
+}
 
 export default App;

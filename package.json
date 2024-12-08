@@ -1,14 +1,10 @@
 {
   "name": "developer-community",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A simple React app to list developer bios added by open-source contributors.",
+  "main": "src/index.js",
   "homepage": "https://tarunmankar.github.io/developer-community",
-  "dependencies": {
-    "cra-template": "1.2.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1"
-  },
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -17,12 +13,22 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tarunmankar/developer-community.git"
+  },
+  "keywords": [
+    "react",
+    "open-source",
+    "community"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "browserslist": {
     "production": [
       ">0.2%",
