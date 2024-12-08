@@ -4,7 +4,6 @@
   "description": "A simple React app to list developer bios added by open-source contributors.",
   "main": "src/index.js",
   "homepage": "https://tarunmankar.github.io/developer-community",
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -42,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.2.0"
   }
 }
