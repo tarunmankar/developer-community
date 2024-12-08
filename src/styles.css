@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+  }
+  header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .developer-card {
+    background: white;
+    border: 1px solid #ddd;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .developer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .how-to-contribute {
+    margin: 2rem;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
