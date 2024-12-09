@@ -1,32 +1,29 @@
-name: CI/CD for Developer Community React Project
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Trigger when changes are pushed to the main branch
-  pull_request:
-    branches:
-      - main  # Trigger on PRs to the main branch
+      - main  # Deploy on push to the main branch
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the code
+      # Checkout the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      # Step 2: Set up Node.js (React environment)
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      # Step 3: Install dependencies
+      # Install dependencies and build the project (if needed)
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm run build
 
-      # Step 4: Run tests
-      - name: Run tests
-        run: npm test -- --ci --silent --coverage
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Specify the target branch for GitHub Pages
+          folder: build      # Specify the folder to deploy (e.g., "build" for React)
+          token: ${{ secrets.GITHUB_TOKEN }}
