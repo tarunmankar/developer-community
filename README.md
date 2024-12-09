@@ -5,14 +5,21 @@
 1. Fork the repository.
 2. Clone your fork to your local machine.
 3. Update `src/data/contributors.json` to include your name, GitHub profile URL, and a short bio.
-4. Commit your changes and push them to your fork.
-5. Create a Pull Request (PR).
+   ```yaml
+      {
+        "name": "Your Name",
+        "github": "https://github.com/your-name",
+        "bio": "Java, Python Expert"
+      }
+   ```
+5. Commit your changes and push them to your fork.
+6. Create a Pull Request (PR).
 
 Once your PR is submitted, I will review and merge your contributions.
 
 ## About
 
-This project aims to provide a space for beginner developers to contribute to open-source projects while learning GitHub workflows.
+This project aims to provide a space for beginner developers to Learn and contribute to open-source projects.
 
 ## License
 
