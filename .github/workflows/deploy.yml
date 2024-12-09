@@ -30,22 +30,3 @@ jobs:
       # Step 4: Run tests
       - name: Run tests
         run: npm test -- --ci --silent --coverage
-
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      # Step 1: Checkout the code again
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # Step 2: Build the React project
-      - name: Build the project
-        run: npm run build  # This assumes you have a build script in your package.json
-
-      # Step 3: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # This is the default build directory for React
