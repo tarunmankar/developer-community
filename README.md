@@ -1,6 +1,4 @@
-# Developer Community
-
-This is a beginner-friendly open-source project where developers can add their bio data to the list. To contribute, follow these steps:
+## This is a beginner-friendly open-source project where developers can add their bio data to the list. To contribute, follow these steps:
 
 ## How to Contribute
 
