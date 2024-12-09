@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/developer-community/static/css/main.5f082ce1.css",
+    "main.js": "/developer-community/static/js/main.de5f5560.js",
+    "index.html": "/developer-community/index.html",
+    "main.5f082ce1.css.map": "/developer-community/static/css/main.5f082ce1.css.map",
+    "main.de5f5560.js.map": "/developer-community/static/js/main.de5f5560.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f082ce1.css",
+    "static/js/main.de5f5560.js"
+  ]
+}
