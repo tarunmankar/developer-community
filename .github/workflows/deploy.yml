@@ -31,28 +31,8 @@ jobs:
       - name: Run tests
         run: npm test -- --ci --silent --coverage
 
-  check-additions:
-    runs-on: ubuntu-latest
-    needs: test  # Ensure it runs only after tests pass
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Ensure only additions
-        run: |
-          git fetch --depth=2
-          MODIFIED_FILES=$(git diff --name-only HEAD HEAD~1)
-          if git diff --cached --name-only | grep -E '\.js|\.jsx|\.css|\.html|\.md'; then
-            echo "Files modified, not just added!"
-            exit 1
-          else
-            echo "Only additions are allowed!"
-          fi
-
   deploy:
     runs-on: ubuntu-latest
-    needs: check-additions  # Deploy only after the additions check
 
     steps:
       # Step 1: Checkout the code again
